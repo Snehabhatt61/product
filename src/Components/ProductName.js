@@ -12,7 +12,7 @@ class ProductName extends React.Component {
         <div className="col-12 product-name-box">
         <p className="product-name m-0">{ProductLists.map(item => item[0].productName)}</p>
         <Link
-          to={`/products`}
+          to={`/`}
           className="product-name m-0"
           onClick = {() => localStorage.setItem('currentId', parseInt(productId) + 1)}
       > --></Link>

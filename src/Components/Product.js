@@ -5,7 +5,7 @@ import ProductName from '../Components/ProductName';
 import ProductDescription from '../json'
 import Example from './Progress';
 
-let ProductLists , ab;
+let ProductLists;
 export default class Product extends React.Component {
 
 setData = () => {
@@ -19,7 +19,6 @@ setData = () => {
     }
     switch (currentID) {
     case "1" : 
-    console.log("case11111", ab)
     return ProductLists.map(item => item.product1);
     case "2" :
         return ProductLists.map(item => item.product2);
@@ -31,19 +30,15 @@ setData = () => {
     }
 }
 render () {
-//    ProductLists = ProductDescription;
-//   console.log("hfdjg",ProductLists)
   return (
 <div className="App">
       <div className=" row">
-        <div className="col-6">
-      {/* {ProductLists.map(item => ( */}
-        <Description product = {this.setData()}/>
-      {/* ))} */}
-      </div>
-      <div className="col-6">
-      <ProductImage />
-      </div>
+          <div className="col-6">
+            <Description product = {this.setData()}/>
+          </div>
+          <div className="col-6">
+            <ProductImage />
+          </div>
       </div>
       <div className="row">
         <div className="col-6 pr-0">
